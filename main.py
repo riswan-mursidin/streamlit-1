@@ -22,7 +22,8 @@ def max_value(lebar,panjang,lebar_bahan):
         min_order = lebar_bahan / max(lebar, panjang)
     return min_order
 
-st.write ("Minimum order =", result = max_value(lebar, panjang, lebar_bahan))
+result = max_value(lebar, panjang, lebar_bahan)
+st.write ("Minimum order =", result)
 
 
 harga_bahan = st.number_input ("Masukkan harga bahan")
