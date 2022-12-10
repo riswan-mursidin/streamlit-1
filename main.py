@@ -11,15 +11,17 @@ st.title ("Aplikasi perhitungan percetakan")
 lebar_bahan = st.number_input("Masukkan lebar bahan")
 panjang = st.number_input("Masukkan panjang cm")
 lebar = st.number_input("Masukkan lebar cm")
+
 min_order = st.button ("Hitung minimum order")
 
-# Mencari minimum order
-if lebar > panjang :
-    min_order = lebar_bahan / panjang
-else :
-    min_order = lebar_bahan / lebar
+# # Mencari minimum order
+# if lebar > panjang :
+#     min_order = lebar_bahan / panjang
+# else :
+#     min_order = lebar_bahan / lebar
 
-    st.write ("Minimum order =", min_order)
+min_order = max(panjang,lebar)
+st.write ("Minimum order =", min_order)
 
 
 harga_bahan = st.number_input ("Masukkan harga bahan")
