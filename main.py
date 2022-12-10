@@ -1,6 +1,5 @@
 """
-# My first app
-Here's our first attempt at using data to create a table:
+# Contoh aplikasi perhitungan ongkos cetakk
 """
 
 import streamlit as st
