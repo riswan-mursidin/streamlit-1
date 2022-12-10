@@ -28,5 +28,5 @@ st.write ("Minimum order =", result)
 harga_bahan = st.number_input ("Masukkan harga bahan")
 minimum_order = st.number_input ("Masukkan minimum order")
 
-harga_order = (panjang * lebar)/10000 * result *harga_bahan
+harga_order = (panjang * lebar)/10000 * minimum_order * harga_bahan
 st.write ("Total harga=", harga_order)
