@@ -3,7 +3,6 @@
 """
 
 import streamlit as st
-import pandas as pd
 
 # Judul APP
 st.title ("Aplikasi perhitungan percetakan")
@@ -12,15 +11,19 @@ st.title ("Aplikasi perhitungan percetakan")
 lebar_bahan = st.number_input("Masukkan lebar bahan")
 panjang = st.number_input("Masukkan panjang cm")
 lebar = st.number_input("Masukkan lebar cm")
-harga_bahan = st.number_input ("Masukkan harga bahan")
 min_order = st.button ("Hitung minimum order")
 
+# Mencari minimum order
 if lebar > panjang :
-    minimum = lebar_bahan / panjang
+    min_order = lebar_bahan / panjang
 else :
-    minimum = lebar_bahan / lebar
+    min_order = lebar_bahan / lebar
 
-    st.write ("Minimum order =", minimum)
+    st.write ("Minimum order =", min_order)
+
+
+harga_bahan = st.number_input ("Masukkan harga bahan")
+
 
 # Konversi cm ke m
 fix_panjang = panjang / 10000
