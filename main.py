@@ -14,14 +14,15 @@ lebar = st.number_input("Masukkan lebar cm")
 
 min_order = st.button ("Hitung minimum order")
 
-# # Mencari minimum order
-# if lebar > panjang :
-#     min_order = lebar_bahan / panjang
-# else :
-#     min_order = lebar_bahan / lebar
+def max_value(lebar,panjang,lebar_bahan):
+    if lebar == 0 or panjang == 0 :
+        return "input tidak valid."
+    else:
+        min_order = lebar_bahan / max(lebar, panjang)
+    return min_order
 
-min_order = max(panjang,lebar)
-st.write ("Minimum order =", min_order)
+result = max_value(lebar, panjang, lebar_bahan)
+st.write ("Minimum order =", result)
 
 
 harga_bahan = st.number_input ("Masukkan harga bahan")
