@@ -28,10 +28,5 @@ st.write ("Minimum order =", result)
 harga_bahan = st.number_input ("Masukkan harga bahan")
 minimum_order = st.number_input ("Masukkan minimum order atau=", result)
 
-# Konversi cm ke m
-fix_panjang = panjang / 10000
-fix_lebar = lebar / 10000
-
-# Hasil perhitungan
-harga_order = (fix_panjang * fix_lebar) * result
+harga_order = (panjang * lebar)/10000 * result
 st.write ("Total harga=", harga_order)
