@@ -35,4 +35,3 @@ fix_lebar = lebar / 10000
 # Hasil perhitungan
 harga_order = (fix_panjang * fix_lebar) * result
 st.write ("Total harga=", harga_order)
-st.write ("Harga per pcsnya = ", harga_order/result)
