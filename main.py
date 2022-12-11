@@ -12,24 +12,27 @@ lebar_bahan = st.number_input("Masukkan lebar bahan")
 panjang = st.number_input("Masukkan panjang cm")
 lebar = st.number_input("Masukkan lebar cm")
 
-min_order = st.button ("Hitung minimum order")
-
 # Mencari minimum order
 def max_value(lebar,panjang,lebar_bahan):
     if lebar == 0 or panjang == 0 :
-        return "input tidak valid, cek input nilai input anda!"
+        return "0"
     else:
         min_order = lebar_bahan / max(lebar, panjang)
     return min_order
 
 result = max_value(lebar, panjang, lebar_bahan)
+minimum = st.button ("Minimum Order")
 st.write ("Minimum order =", result)
 
 
-harga_bahan = st.number_input ("Masukkan harga bahan")
+harga_bahan = st.number_input ("Masukkan harga bahan per meter")
 minimum_order = st.number_input ("Masukkan minimum order")
 
-harga_order = (panjang * lebar)/10000 * minimum_order * harga_bahan
-st.write ("Total harga=", harga_order)
+harga_orderfix =  ((panjang * lebar)/10000 * minimum_order * harga_bahan)
+
+harga_order = st.button ("Total Harga")
+
+st.write ("Total harga=", harga_orderfix)
+
 
 #munculkan st.write saat ditekan tombol ya
